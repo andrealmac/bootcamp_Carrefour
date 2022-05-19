@@ -1,0 +1,146 @@
+/* #title -> Informando que é o id com "#"
+.subtitle, .post_title -> Informando que é a class com "." */
+
+/* box model tem a margin>border>padding>content */
+/* As margens (margin) são espaçamentos entre elementos;
+As bordas (border) ;
+O padding é um espaçamento entre as bordas e o conteúdo, a diferença para as margens é que declarações de imagem de fundo funcionam nele;
+O conteúdo (content) é o que o seu bloco representa, um texto, uma imagem, um vídeo; */
+
+body{
+    background: #f7f7f7;
+    font-family: Verdana;
+    max-width: 900px;
+    margin: auto;
+}
+
+.photo{
+    border: 1px solid #505050;
+    border-radius: 50%;
+}
+
+#title, .subtitle, .post_title{
+    color: #505050;
+}
+
+#title{
+    font-size: 40px;
+    text-transform: uppercase;
+}
+
+a{
+    text-decoration: line-through;
+    color:#505050;
+}
+
+.post_title{
+    font-size: 16px;
+    font-style: italic;
+    margin: 0;
+    margin-bottom: 15px;
+}
+
+/*conteudo - da para enchegar o box model*/
+.post{
+    background: #FFF;
+    padding: 15px;
+    border: 3px solid #505050;
+    margin-bottom: 15px;
+    border-radius: 5px;
+}
+
+.post_content{
+    margin: 0;
+    margin-bottom: 15px;
+    text-transform: capitalize;
+    text-align: justify;
+}
+
+.post_image{
+    margin-bottom: 15px;
+    width: 100%;
+}
+
+.contact_list{
+    list-style-type: none;
+    padding-left: 15px;
+}
+
+.contact_list li a{
+    text-decoration: none;
+}
+
+/* ESTILO
+
+padding: 10px(y, cima e baixo) 5px(x, esq, dir) 
+   padding: 15px(topo) 10px(direita) 5px(baixo) 0(esquerda)
+   ou
+   padding:-top: 15px
+   padding:-right: 15px
+   padding:-bottom: 15px
+   padding:-left: 15px
+   
+   background-color: green
+   background-image: url("bg.png")
+   background-position: top
+    ou
+   background-color: green
+   background-color: #008800
+   background: #008800
+
+   border: 3px(largura) solid(estilo) blue(cor)
+   border-top: 2px dotted green
+   border-right: 4px dashed pink
+    ou
+   border: 3px solid #505050
+   border-width: 3px
+   border-color: #505050
+   border-style: solid
+   ou
+   border-top-width: 3px
+   border-top-color: blue
+   border-top-style: solid
+   ou
+   border-radius: 10px
+   border-radius: 50%
+   */
+
+   /* TEXTO
+    font-family:Verdana -> fonte no texto
+    font-family:Verdana, arial
+
+    font-size:30px -> tamanho do texto
+
+    font-style: normal -> aparencia do texto
+
+    font-weight:normal -> peso do texto
+
+    text-transform: uppercase/lowercase/capitalize ->transforma o texto em minusc, maiusc, maiusc so a primeira letra
+
+    text-decoration: underline/overline/line-through ->destaque no texto, linha abaixo, linha acima, linha cortando a palavra
+*/
+
+/* LISTA
+
+    ul
+    list-style-type:square ->quadrado
+    ol
+    list-style-type:upper-roman
+    ul
+    list-style-type:"\1F44D"
+    ul
+    list-style-image:url("rocket.png")
+*/
+
+/* DIMENSAO E ALINHAMENTO
+
+width ->Larg
+height ->Alt
+
+max-width ->Largura max
+max-height -> alt max
+
+margin ->espacamento e alinhar
+
+text align ->alinhar os textos
+*/
