@@ -1,0 +1,41 @@
+/* Usar variavel para usar no var */
+:root{
+    --vermelho: #E50914;
+    --preto: #141414; 
+}
+/* Cabeçario */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* Fundo ficar preto e fonte das letras */
+body{
+    background: var(--preto);
+    font-family: 'Times New Roman', Times, serif;
+}
+/* Deixar os link no lado do logo */
+header .container{
+    /* border: 1px solid black; */
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+/* Logo ficar vermelho */
+header .logo{
+    margin-left: 5px;
+    color: var(--vermelho);
+    font-family: 'Arial Black', Times;
+    font-size: 40px;
+}
+/* Os links ficarem branco com espaçamento */
+header nav a{
+    text-decoration: none;
+    color: #AAA;
+    margin-right: 10px;
+}
+/* quando passar o mouse, ficar branco forte */
+header nav a:hover{
+    color: #fff;
+}
