@@ -10,9 +10,11 @@
     box-sizing: border-box;
 }
 /* Fundo ficar preto e fonte das letras */
+/* elementos base */
 body{
     background: var(--preto);
     font-family: 'Times New Roman', Times, serif;
+    color: white;
 }
 /* Deixar os link no lado do logo */
 header .container{
@@ -38,4 +40,50 @@ header nav a{
 /* quando passar o mouse, ficar branco forte */
 header nav a:hover{
     color: #fff;
+}
+/* filme principal */
+.filme-principal{
+    font-size: 16px;
+    background: linear-gradient(rgba(0,0,0,.50),rgba(0,0,0,.50)100%), url('/interface_Netflix/img/capa-house.jpg');
+    /* Imagem */
+    height: 700px;
+    background-size: cover;
+    /* botoes */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.filme-principal .descricao{
+    margin-top: 10px;
+    margin-bottom: 40px;
+}
+
+.filme-principal .titulo{
+    margin-top: 15%;
+    font-size: 40px;
+    font-family: 'Trebuchet MS',  Arial, sans-serif;
+}
+
+.botao{
+    background-color: rgba(0,0,0,.50);
+    border: none;
+    color: white;
+
+    padding: 15px 30px;
+    margin-right: 15px;
+    font-size: 12px;
+
+    cursor: pointer;
+    transition: .3s ease all;
+}
+
+.botao:hover{
+    background-color: white;
+    color: black;
+}
+
+.botao i{
+    margin-right: 8px;
 }
