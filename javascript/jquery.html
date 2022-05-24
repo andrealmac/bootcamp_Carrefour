@@ -7,6 +7,7 @@
 <style>
     body{
         background-color: #efefef;
+        
     }
     .box {
         position: relative;
@@ -44,6 +45,22 @@
         background-color: yellow;
         color: #000;
     }
+    .container{
+        width: 500px;
+        height: 300px;
+        background-color: black;
+        position: absolute;
+        top: 600px;
+        left: 50px;
+        padding: 20px 30px;
+    }
+    .item{
+        width: 100px;
+        height: 100px;
+        background-color: red;
+        display: inline-block;
+    }
+
 </style>
 
 </head>
@@ -81,6 +98,11 @@
     <br><br><br>
     <div class="resultado"></div>
 
+    <div class="container">
+        <div class="item"></div>
+    </div>
+
+   
     <!-- chamar o jquery -->
     <script src="/javascript/jquery-3.6.0.min.js"></script>
     <!-- Seletor -->
@@ -151,5 +173,17 @@
             })
     </script>
     <!-- Position e Offset -->
+    <script>
+        var container = $(".container");
+        var item = $(".item");
+        //var posicao = item.position();
+        var posicao = item.offset(); //referencia para o nav
+
+        console.log(posicao.left, posicao.top)
+    </script>
+    <!-- Scroll e scrollTop -->
+    <script>
+        
+    </script>
 </body>
 </html>

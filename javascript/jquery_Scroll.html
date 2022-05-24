@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style>
+    * {
+        margin: 0;
+    }
+    body{
+        /* Scroll */
+        padding-top: 60px;
+    }
+    .menu{
+        width: 1500px;
+        height: 50px;
+        padding: 0;
+        list-style: none;
+        background-color: black;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        position: fixed;
+        left: 0;
+        top: 0;
+    }
+    .menu li a{
+        color: #fff;
+        padding: 1.1rem 2rem;
+        text-transform: uppercase;
+        font-weight: bold;
+    }
+    .menu li a:hover{
+        background-color: pink;
+        color: black;
+    }
+    .item{
+        height: 600px;
+    }
+    .btn{
+        border: 0;
+        background-color: black;
+        color: #fff;
+        padding: 1rem;
+        font-size: 1rem;
+        position: fixed;
+        bottom: 1rem;
+        right: 1rem;
+    }
+</style>
+</head>
+<body>
+    <ul class="menu">
+        <li><a href="#empresa">Empresa</a></li>
+        <li><a href="#projetos">Projetos</a></li>
+        <li><a href="#contato">Contatos</a></li>
+    </ul>
+    <div class="item">
+        <h2 id="empresa">Empresa</h2>
+    </div>
+    <div class="item">
+        <h2 id="projetos">projetos</h2>
+    </div>
+    <div class="item">
+        <h2 id="contato">Contato</h2>
+    </div>
+    <button class="btn">Subir</button>
+
+    <script src="/javascript/jquery-3.6.0.min.js"></script>
+
+    <script>
+        var link = $("menu li a");
+    </script>
+</body>
+</html>
