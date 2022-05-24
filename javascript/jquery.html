@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    
+    <title>JQUERY</title>
+<style>
+    body{
+        background-color: #efefef;
+    }
+    .box {
+        position: relative;
+        left: 0;
+        width: 100px;
+        height: 100px;
+        background-color: pink;
+    }
+    button{
+        font-size: 2rem;
+        background-color: #000;
+        color: #fff;
+        padding: 1rem 2rem;
+    }
+    ul{
+        list-style: none;
+        padding: 0;
+        width: 100%;
+        height: 70px;
+        background-color: rgb(170, 148, 148);
+        display: flex;
+        align-items: center;
+    }
+    li{
+        margin-left: 20px;
+        text-transform: uppercase;
+    }
+    a{
+        color: #fff;
+
+        padding: 25px 20px;
+    }
+    a:hover,
+    a.active{
+        background-color: yellow;
+        color: #000;
+    }
+</style>
+
+</head>
+<body>
+    <p class="p1">Lorem2</p>
+    <p>Lorem.</p>
+    <p id="p2"></p>
+    <p data-aula="p3"></p>
+
+    <div class="box"></div>
+
+    <hr>
+
+    <button id="starting">>Go go go!</button>
+    
+    <button class="button">Click</button>
+    <div class="mensagem">Olá Brasil</div>
+
+    <ul>
+        <li><a class="link active" href="#" >Home</a></li>
+        <li><a class="link" href="#" >Empresa</a></li>
+        <li><a href="#" class="link">Projetos</a></li>
+        <li><a href="#" class="link">Contatos</a></li>
+    </ul>
+
+    <form action="#">
+        <label for="cep">CEP</label>
+        <input type="text" name="cep" id="cep" placeholder="00000-00">
+
+        <label for="logradouro">Logradouro</label>
+        <input type="text" name="logradouro" id="logradouro" placeholder="Avenida exemplo de tal">
+
+        <button>Submit</button>
+    </form>
+    <br><br><br>
+    <div class="resultado"></div>
+
+    <!-- chamar o jquery -->
+    <script src="/javascript/jquery-3.6.0.min.js"></script>
+    <!-- Seletor -->
+    <script>
+        var p1 = $('.p1'); //igual a var p1 = document.querySelector(".p1");
+        console.log(p1);
+        //var p1 = $('.p1').remove(); remover
+        var p2 = $('#p2');//var p2 = $('#p2').get(0) ou  var p2 = $('#p2')[0] retornar o index
+        console.log(p2);//acessar o id
+    </script>
+    <!-- Efeitos -->
+    <script>
+        var box = $('.box');
+        //(primeiro e o css, segundo e o tempo/seg)
+        box.animate({
+            width:"200px",
+            height:"200px", 
+            left: "500"
+        },1000)
+    </script>
+    <!-- Eventos -->
+    <script>
+        var starting = $("#starting");
+        starting.click(function(){
+            console.log("alguma coisa")
+        })
+        //forma 2 de faazer e mais indicada
+        //recebe dois parametros (nome do evento, o q sera executado)
+        starting.on("click",function(){
+            console.log('dado');
+            box.animate({
+                left: "1000"
+            },5000)
+        })
+    </script>
+    <!-- Delay -->
+    <script>
+        var button = $(".button");
+        var mensagem = $(".mensagem");
+
+        button.on("click",function(){
+            mensagem.delay("slow").fadeOut();//pode usar o fast e numeros tbm
+        })
+    </script>
+    <!-- addClass e removeClass -->
+    <script>
+        var link = $(".link");
+        link.on("click", function(){
+            //global
+            link.removeClass("active");
+            $(this).addClass("active");
+        })
+    </script>
+    <!-- Serialize e SerializeArray -->
+    <script>
+        var form = $("form");
+        var resultado = $(".resultado");
+
+        form.on("submit", function(event){
+            event.preventDefault();//quando click no submit nao recarregar a pagina
+           // console.log("teste")
+            var data = $(this).serialize();
+            console.log(data);
+            resultado.text(data);
+
+            var data1 = $(this).serializeArray();
+            console.log(data1);
+            })
+    </script>
+    <!-- Position e Offset -->
+</body>
+</html>
