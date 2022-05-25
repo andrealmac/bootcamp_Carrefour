@@ -2,8 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
     <title>Document</title>
 <style>
     * {
@@ -14,7 +13,7 @@
         padding-top: 60px;
     }
     .menu{
-        width: 1500px;
+        width: 1960px;
         height: 50px;
         padding: 0;
         list-style: none;
@@ -37,7 +36,7 @@
         color: black;
     }
     .item{
-        height: 600px;
+        height: 850px;
     }
     .btn{
         border: 0;
@@ -71,7 +70,33 @@
     <script src="/javascript/jquery-3.6.0.min.js"></script>
 
     <script>
-        var link = $("menu li a");
+        var link = $(".menu li a");
+        var subir = $(".btn");
+
+        $(window).scroll(function(){
+            //console.log("oi") contar quantas vezes mexe na barra de rolagem
+            var minhaPosicao = $(this).scrollTop();
+            console.log(minhaPosicao);
+            if(minhaPosicao>=1200){
+                subir.fadeIn();//aparecer o botao subir
+            }else{
+                subir.fadeOut();
+            }
+        })
+
+        //scrollTop
+        link.on("click", function(){
+            //alert("oi")
+            var seletor = $(this).attr("href");
+            //console.log(seletor); para pegar o id dos href em a
+            var posicao = $(seletor).offset().top;//saber a posicao referente a pagina
+            console.log(posicao)
+            $("html, body").animate({scrollTop:posicao-50},1000);
+        });
+
+        subir.on('click',function(){
+            $("html, body").animate({scrollTop:0},1000);
+        })
     </script>
 </body>
 </html>
