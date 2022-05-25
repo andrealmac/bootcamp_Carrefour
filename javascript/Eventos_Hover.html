@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+
+    <style>
+        /* tbody >tr:hover {
+            background-color: #ccc;
+        } */
+        .link {
+            color: red;
+        }
+        .tractive{
+            background-color: blue;
+        }
+    </style>
+</head>
+<body>
+    <a href="#" id="link">
+        <h1>Olá mundo</h1>
+    </a>
+
+    <table style="width: 100%;">
+        <thead>
+            <th align="left">Nome</th>
+            <th align="left">Idade</th>
+        </thead>
+        <tbody>
+            <tr class="tr">
+                <td style="height: 30px;">Alien</td>
+                <td style="height: 30px;">2000</td>
+            </tr>
+            <tr class="tr">
+                <td style="height: 30px;">Bixo</td>
+                <td style="height: 30px;">1000</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <script>
+        var link = document.getElementById('link')
+        var trs = document.getElementsByClassName('tr')
+
+        link.addEventListener('mouseover', function(){
+            //alert("Ola")
+            link.classList.add('link')//mudar a cor da letra usando o css da linha 11
+        })
+        //remover o mouse
+        link.addEventListener('mouseleave', function(){
+            //alert("Ola")
+            link.classList.remove('link')//mudar a cor da letra usando o css da linha 11
+        })
+
+        for(var i =0; i<trs.length; i++){
+            //console.log(trs[i])
+            trs[i].addEventListener("mouseover", function(){
+                //console.log(this)//this referencia ao escopo atual
+                this.classList.add("tractive")
+            })
+            trs[i].addEventListener("mouseleave", function(){
+                //console.log(this)//this referencia ao escopo atual
+                this.classList.remove("tractive")
+            })
+        }
+    </script>
+</body>
+</html>

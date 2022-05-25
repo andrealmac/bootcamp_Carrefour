@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <title>Document</title>
+</head>
+<body>
+    <script>
+        function nomeDaFuncao(){
+            return 1;
+        }
+        nomeDaFuncao();
+
+        function receberParametros(valor){
+            return valor;
+        }
+        receberParametros('Machado')
+
+        function calculaMedia(n1,n2,n3){
+            return (n1+n2+n3)/3;
+        }
+        calculaMedia(10,5,7)
+
+        var pessoa ={
+            nome:"machado",
+            idade:24,
+            profissao:"professor"
+        };
+
+        function novaPessoa(nome, idade, profissao){
+            pessoa.nome = nome;
+            pessoa.idade = idade;
+            pessoa.profissao = profissao;
+        }
+
+        // function novaObjeto(novoObjetoPessoa){
+        //     pessoa = novoObjetoPessoa;
+        //     return novoObjetoPessoa;
+        // }
+
+        function novaObjeto(novoObjetoPessoa){
+            if(typeof novoObjetoPessoa == 'object'){
+                pessoa = novoObjetoPessoa;
+                return true;
+            } else {
+                return false;
+            }}
+
+        function testeParametros(){
+            console.log(arguments);
+            return true;
+        }
+    </script>
+</body>
+</html>

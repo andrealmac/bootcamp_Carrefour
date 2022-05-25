@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="text">
+    <div id="result" style="display: none;">é o enter uhu</div>
+
+    <script>
+        var text = document.getElementById("text");
+        var result = document.getElementById("result")
+
+        const TECLAENTER = 13;
+
+        text.addEventListener("keypress", function(evento){
+            //console.log("disparou",this.value);
+            //saber qual a tecla que esta digitando atraves de um codigo
+            //console.log(evento.keyCode);
+            if(evento.keyCode == TECLAENTER)
+                result.style.display="block";
+        })
+    </script>
+</body>
+</html>

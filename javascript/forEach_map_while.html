@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+</head>
+<body>
+    <div class="js">react</div>
+    <div class="js">angular</div>
+    <div class="js">typescript</div>
+    <div class="js">es6</div>
+    
+    <script>
+
+        var js = document.getElementsByClassName('js');
+
+        //3 parametros
+        //1 parametro variavel de iniciacao(valor inicial)
+        //2 parametro definir a condicao 
+        //3 parametro somar o i
+        for(let i=0; i<js.length; i++){
+            //console.log(i);
+            //console.log(js[i]);
+            let texto = js[i].innerHTML;
+            js[i].innerHTML="curso "+texto+" js"
+        }
+        var array = [1,2,3,4];
+        //console.log(js,array)
+
+
+        //so percorre array
+        //recebe dois valores 
+        //a = elemento
+        //i = indice
+        // array.forEach(function(a,i) {
+        //     //console.log(a,i)
+        //     if(a===1){
+        //         array[i]="outra";
+        //     }
+        // })
+        // console.log(array)
+
+        //so percorre array
+        //bam parecido com o forEach
+        // var novo = array.map(function(a,i){
+        //     //console.log(a,i)
+        //     if(a===1){
+        //         a="outra";
+        //     }
+        //     return a;
+        // })   
+        // console.log(novo); 
+
+        //while
+        var i =0
+        while(i<5){
+            console.log("oi");
+            i++;
+        }
+        
+
+    </script>
+</body>
+</html>

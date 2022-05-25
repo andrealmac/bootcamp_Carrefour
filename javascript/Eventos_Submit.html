@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .error{
+            border: 2px solid red;
+        }
+    </style>
+</head>
+<body>
+    <form action="#" method="post">
+        <input type="text" name="name" value="keven">
+        <input type="email" name="email" value="andre@gmail.com">
+        <button type="submit">enter</button>
+    </form>
+
+    <script>
+        var form = document.querySelector("form");
+
+        form.addEventListener("submit", function(evento){
+            //nao deixando dar reflesh na pagina
+            evento.preventDefault();
+            //console.log(this.elements);
+            var isvalid = true;
+
+            //verificar se os campos estao vazios
+            for(var i=0;i<this.elements.length;i++){
+                var item = this.elements[i]
+
+                console.log(item.type);
+            
+                if(item.type!=="submit"){
+                    if(item.value==""){
+                    item.classList.add("error");
+                    isvalid = false;
+                    }else{
+                        item.classList.remove("error");
+                    }
+                }
+            }
+            console.log(isvalid);
+        })
+    </script>
+</body>
+</html>

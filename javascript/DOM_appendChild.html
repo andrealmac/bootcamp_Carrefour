@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <title>Document</title>
+</head>
+<body>
+    <!-- acrescentar dentro de um elemento -->
+    <div id="nissan">
+
+    </div>
+
+    <script>
+        var versa = document.createElement("p");
+        versa.innerHTML="versa";
+
+        var sentra = document.createElement("p");
+        sentra.innerHTML="sentra";
+
+        document.getElementById("nissan").appendChild(versa);
+        document.getElementById("nissan").appendChild(sentra);
+    </script>
+</body>
+</html>

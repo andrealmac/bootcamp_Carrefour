@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+</head>
+<body>
+    <h4 id="title">Meu Botao</h4>
+    <button id="btn">Click</button>
+    <script>
+        var botao = document.getElementById("btn");
+        var titulo = document.getElementById("title");
+        //Funcao do javascript recebe dois parametros
+        //elemento.adicionarEvento('nome do evento',funcao que executa pos evento)
+        botao.addEventListener('click',function(){
+            alert("voce clicou");
+            title.remove();
+        })
+    </script>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        var nome = "Andre";// escopo global
+
+        function teste(){
+            nome="Rafael";//escopo global
+        }
+        teste();
+        console.log(nome)
+
+        function teste2(){
+            let nome = "Carlos";//escopo local
+        }
+        teste2();
+        console.log(nome)
+
+        //constate nao pode ser alterada
+        const nome2="Augusto";
+        nome2="Vlad";
+        console.log(nome2)
+
+        // var nomeCompletoDoFulano = "Andre";
+        // console.log(nomeCompletoDoFulano)
+
+    </script>
+    
+</body>
+</html>
