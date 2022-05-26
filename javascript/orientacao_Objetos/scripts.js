@@ -1,9 +1,15 @@
+//A programação baseada em protótipos é um estilo de programação orientada a objetos no qual o comportamento de reuso (também conhecido como herança) é aplicado através da clonagem de objetos existentes, que servem como protótipos.
+//Abstraçao deixar o problemas mais simples
+//Heraças alem de herdar tem suas proprias caract
+//Encapsulamento classe tem propriedades e metodos independentes do restante do código
+//polimorfismo se comportam de forma diferentes
+//CLASS
 class contaBancaria{
     constructor(agencia, numero, tipo){
-        this.agencia = agencia;
-        this.numero = numero;
-        this.tipo = tipo;
-        this._saldo = 0;
+        this.agencia = agencia;//OBJETOS
+        this.numero = numero;//OBJETOS
+        this.tipo = tipo;//OBJETOS
+        this._saldo = 0;//OBJETOS
     }
 
     get saldo(){
