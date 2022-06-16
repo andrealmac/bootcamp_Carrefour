@@ -17,13 +17,26 @@ function sum(a,b){
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
+
   <div className='App'>
     {primeiroJSX()}
     <h2>{sum(10,15)}</h2>
   </div>
 );
+// Renderizacao
+// const element = <h1>Hello, world</h1>;
+// root.render(element);
+function renderizacao(){
+  const element=(
+    <div>
+      <h1>Hello World2</h1>
+      <h2>Data{new Date().toLocaleDateString()}</h2>
+    </div>
+  );
+  root.render(element);
+}
+setInterval(renderizacao,1000)
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
+
+
 reportWebVitals();
