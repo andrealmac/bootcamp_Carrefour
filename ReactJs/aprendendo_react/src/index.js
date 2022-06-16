@@ -4,11 +4,23 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
+function primeiroJSX(){
+  return(
+    <div>
+      <h1>Andre - Hello World</h1>
+    </div>
+  )
+}
+function sum(a,b){
+  return a+b
+}
+
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
+  <div className='App'>
+    {primeiroJSX()}
+    <h2>{sum(10,15)}</h2>
+  </div>
 );
 
 // If you want to start measuring performance in your app, pass a function
